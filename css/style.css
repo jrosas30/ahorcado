@@ -1,0 +1,106 @@
+body {
+    background-color: #E1ECF6;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.botones-principal {
+    justify-content: center;
+}
+
+.btn-jugar {
+    display: block;
+    /* position: absolute;   */
+    background-color: #0A3871;
+    color: white;
+    width: 25%;
+    padding: 5px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 10px 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 22px;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-jugar:hover {
+    background-color: #223094;
+}
+
+.btn-agregar {
+    
+    display: block;
+    /* position: absolute;   */
+    background-color: #0A3871;
+    color: white;
+    width: 25%;
+    padding: 5px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 10px 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 22px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.boton-comenzar{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn-declinar{
+    background-color: #f44336; /* Green */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
+.btn-agregar:hover {
+    background-color: #223094;
+}
+
+#salida {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bold;
+    color: #AAAAAA;
+    background-color: #E1ECF6;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+#boton-jugar {
+    display: inline-block;
+}
