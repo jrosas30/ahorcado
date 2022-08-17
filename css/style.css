@@ -1,5 +1,5 @@
 body {
-    background-color: #E1ECF6;
+    background-color: #F3F5FC;
 }
 
 h1 {
@@ -8,54 +8,48 @@ h1 {
 
 .container {
     text-align: center;
+    width: 1024px;
 }
 
-.botones-principal {
-    justify-content: center;
+.div-botones {
+    position: relative;
+    top: 200px;
+    text-align: center;
+    margin: 20px;
 }
 
 .btn-jugar {
-    display: block;
-    /* position: absolute;   */
+    display: inline-block;
     background-color: #0A3871;
     color: white;
-    width: 25%;
-    padding: 5px 5px;
-    border-radius: 10px;
+    padding: 24px;
     text-decoration: none;
-    margin: 10px 10px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 22px;
-    align-items: center;
-    text-align: center;
+    border-radius: 24px;
+    font-family: monospace;
+    font-size: 18px;
+    width: 400px;
 }
 
 .btn-jugar:hover {
     background-color: #223094;
 }
 
-.btn-agregar {
-    
-    display: block;
-    /* position: absolute;   */
-    background-color: #0A3871;
-    color: white;
-    width: 25%;
-    padding: 5px 5px;
-    border-radius: 10px;
+.btn-agregar {  
+    display: inline-block;
+    background-color: #E1ECF6;
+    color: #0A3871;
+    padding: 24px;
     text-decoration: none;
-    margin: 10px 10px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 22px;
-    align-items: center;
-    text-align: center;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-family: monospace;
+    font-size: 16px;
+    width: 280px;
+}
 
+.btn-agregar:hover {
+    background-color: #223094;
+    color: #ffffff;
 }
 
 .boton-comenzar{
@@ -84,9 +78,7 @@ h1 {
 
 
 
-.btn-agregar:hover {
-    background-color: #223094;
-}
+
 
 #salida {
     display: inline-block;
