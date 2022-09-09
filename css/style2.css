@@ -1,5 +1,29 @@
-.container-palabras {
+.juego {
+    display: inline-block;
     text-align: center;
+    padding: 100px;
+}
+
+.ahorcado{
+    opacity: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+canvas {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+#salida {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    letter-spacing: 15px;
 }
 
 .div-palabra{
@@ -11,18 +35,8 @@
 
 .div-palabra p{
     position: absolute;
-    top: 400
-    px;
+    top: 400px;
     left: 376;
-}
-
-.div-botones2 {
-    position: absolute;
-    top: 200px;
-    text-align: center;
-    margin: 20px;
-    top: 701px;
-    left: 376px;
 }
 
 .btn-guardar {

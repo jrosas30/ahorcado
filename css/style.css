@@ -11,11 +11,21 @@ h1 {
     width: 1024px;
 }
 
+ul {
+    list-style: none;
+}
+
+li:before {
+    content: "- "
+}
+
+
 .div-botones {
     position: relative;
-    top: 200px;
+    top: 50px;
     text-align: center;
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .btn-jugar {
