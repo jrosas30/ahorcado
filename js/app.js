@@ -53,7 +53,6 @@ function seleccionarLetras(palabra, arrGuiones) {
                         const dataArrMalas = new Set(arrayMalas);
                         var resultArrayMalas = [...dataArrMalas];
                         console.log("malas: " + resultArrayMalas)
-                        // return resultArrayMalas.length;
                     }
                 }
             }
@@ -113,9 +112,7 @@ function seleccionarLetras(palabra, arrGuiones) {
 
 
 const botonJugar = document.getElementById("boton-comenzar");
-// console.log(botonJugar)
 botonJugar.addEventListener("click", inciarJuego)
 
 const botonGuardaJugar = document.getElementById("btn-guardar-empezar");
-// console.log(botonGuardaJugar)
 // botonGuardaJugar.addEventListener("click", iniciarPalabraGuardada)
