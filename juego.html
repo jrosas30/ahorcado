@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style2.css">
-    <title>Document</title>
+    <script src="js/sweetalert2@11.js"></script>
+    <title>Juego del Ahorcado</title>
 </head>
 
 <body>
-
     <h1>JUEGO DEL AHORCADO</h1>
     <div class="ahorcado">
         <canvas width="600" height="400"></canvas>
-        <input type="text" id="salida" readonly>
+        <input class="salidaBuenas" type="text" id="salida" readonly>
+        <textarea class="salidaMalas" id="malas" height="300"></textarea>
         <div class="div-botones2">
             <button class="boton-comenzar" id="boton-comenzar">Comenzar Juego</button>
             <a class="btn-declinar" href="index.html">Declinar</a>

@@ -19,7 +19,6 @@ function PrimerTrazo() {
     pincel.lineTo(200, 355);
     pincel.stroke();
 }
-PrimerTrazo()
 
 function segundoTrazo() {
     pincel.beginPath();
@@ -30,8 +29,6 @@ function segundoTrazo() {
     pincel.stroke();
 }
 
-segundoTrazo()
-
 function tercerTrazo() {
     pincel.beginPath();
     pincel.lineWidth = "10";
@@ -40,8 +37,6 @@ function tercerTrazo() {
     pincel.lineTo(315, 55);
     pincel.stroke();
 }
-tercerTrazo()
-
 
 function circunferencia() {
     pincel.beginPath();
@@ -70,7 +65,6 @@ function cara() {
     pincel.moveTo(258, 3);
     pincel.stroke();
 }
-circunferencia()
 
 function trazoCuerpo() {
     pincel.beginPath();
@@ -81,8 +75,6 @@ function trazoCuerpo() {
     pincel.stroke();
 }
 
-trazoCuerpo()
-
 function trazoBrazoIzquierdo() {
     pincel.beginPath();
     pincel.lineWidth = "10";
@@ -91,8 +83,6 @@ function trazoBrazoIzquierdo() {
     pincel.lineTo(280, 175);
     pincel.stroke();
 }
-
-trazoBrazoIzquierdo()
 
 function trazoBrazoDerecho() {
     pincel.beginPath();
@@ -103,8 +93,6 @@ function trazoBrazoDerecho() {
     pincel.stroke();
 }
 
-trazoBrazoDerecho()
-
 function trazoPiernaIzquierda() {
     pincel.beginPath();
     pincel.lineWidth = "10";
@@ -114,8 +102,6 @@ function trazoPiernaIzquierda() {
     pincel.stroke();
 }
 
-trazoPiernaIzquierda()
-
 function trazoPiernaDerecha() {
     pincel.beginPath();
     pincel.lineWidth = "10";
@@ -124,5 +110,3 @@ function trazoPiernaDerecha() {
     pincel.lineTo(350, 315);
     pincel.stroke();
 }
-
-trazoPiernaDerecha()

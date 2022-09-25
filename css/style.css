@@ -86,10 +86,6 @@ li:before {
     font-size: 16px;
 }
 
-
-
-
-
 #salida {
     display: inline-block;
     text-align: center;
@@ -105,4 +101,105 @@ li:before {
 
 #boton-jugar {
     display: inline-block;
+}
+
+.juego {
+    display: inline-block;
+    text-align: center;
+    padding: 100px;
+}
+
+.ahorcado{
+    opacity: 75%;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+canvas {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+
+
+.div-palabra{
+    position: absolute;
+    top: 256px;
+    left: 376px;
+
+}
+
+.div-palabra p{
+    position: absolute;
+    top: 400px;
+    left: 376;
+}
+
+.btn-guardar {
+    display: inline-block;
+    background-color: #0A3871;
+    color: white;
+    padding: 24px;
+    text-decoration: none;
+    border-radius: 24px;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 19px;
+    width: 332px;
+}
+
+.btn-jugar:hover {
+    background-color: #223094;
+}
+
+.btn-cancelar {  
+    display: inline-block;
+    background-color: #E1ECF6;
+    color: #0A3871;
+    padding: 24px;
+    margin: 10px;
+    text-decoration: none;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 19px;
+    width: 332px;
+}
+
+.salidaBuenas {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    letter-spacing: 15px;
+}
+
+.salidaMalas {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    letter-spacing: 15px;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bold;
+    color: #AAAAAA;
+    background-color: #E1ECF6;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.div-botones2 {
+    text-align: center;
+    position: relative;
+    top: 90px;
+    margin: 15px 10px;
 }

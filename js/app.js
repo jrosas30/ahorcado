@@ -1,10 +1,15 @@
-let vidas = 9;
 const palabras = ["caballo", "perro", "gato", "mesa", "silla", "computador", "luna", "oscuridad", "automovil", "avion", "sofa", "telefono", "pantalla", "lapiz", "escritorio"];
 const expresionReg = /^[a-z]+$/i;
 
+let palabraGuardada = document.getElementById("palabraUsuario");
+console.log(palabraGuardada);
+
 const inciarJuego = () => {
-    let palabraAzar = palabraAleatoria(palabras);
-    funRemplazarLetras(palabraAzar)
+
+    var palabraAzar = palabraAleatoria(palabras);
+    var guiones = funRemplazarLetras(palabraAzar);
+    var arrM = seleccionarLetras(palabraAzar, guiones);
+
 }
 
 const palabraAleatoria = (lista) => {
@@ -16,22 +21,101 @@ const palabraAleatoria = (lista) => {
 
 const funRemplazarLetras = (palabra) => {
     let palabraConvertida = palabra.replace(/[A-Za-z]/gm, "_");
-    document.querySelector("#salida").value = palabraConvertida
-    const arrayLetras = Array.from(palabraConvertida);
+    document.querySelector("#salida").value = palabraConvertida;
+
+    return palabraConvertida;
+}
+
+function seleccionarLetras(palabra, arrGuiones) {
+    let p = palabra
+    const arrayLetras = Array.from(arrGuiones);
+    // console.log(p)
+    const arrayMalas = [];
+    const arrayBuenas = [];
+    const arrayLetraPresionada = []
+    var vidas = 9;
     document.addEventListener("keypress", (e) => {
-        for (let i = 0; i < palabra.length; i++) {
-            letraPresionada = e.key;
-            if (letraPresionada == palabra[i]) {
-                console.log(palabra[i]);
+        var letraPresionada = e.key;
+        for (let i = 0; i < p.length; i++) {
+            if (letraPresionada == p[i]) {
+                // console.log(p[i]);
                 arrayLetras[i] = letraPresionada
             }
+            if (letraPresionada != arrayLetraPresionada[i]) {
+                if (p.includes(letraPresionada)) {
+                    arrayBuenas.push(letraPresionada)
+                    const dataArrBuenas = new Set(arrayBuenas)
+                    var resultArrayBuenas = [...dataArrBuenas]
+                    console.log("buenas: " + resultArrayBuenas);
+                } else {
+                    if (letraPresionada != "." && letraPresionada != "," && letraPresionada != "-" && letraPresionada != "´" && letraPresionada != "+" && letraPresionada != "<" && letraPresionada != ">" && letraPresionada != "{" && letraPresionada != "}" && letraPresionada != "*" && letraPresionada != "¨" && letraPresionada != "/" && letraPresionada != "0" && letraPresionada != "1" && letraPresionada != "2" && letraPresionada != "3" && letraPresionada != "3" && letraPresionada != "4" && letraPresionada != "5" && letraPresionada != "6" && letraPresionada != "7" && letraPresionada != "8" && letraPresionada != "9") {
+                        arrayMalas.push(letraPresionada);
+                        const dataArrMalas = new Set(arrayMalas);
+                        var resultArrayMalas = [...dataArrMalas];
+                        console.log("malas: " + resultArrayMalas)
+                        // return resultArrayMalas.length;
+                    }
+                }
+            }
         }
-        console.log(arrayLetras)
         let cadena = arrayLetras.join('');
-        document.querySelector("#salida").value = cadena
+        document.querySelector("#salida").value = cadena.toUpperCase();
+        if (resultArrayMalas != undefined) {
+            let stringMalas = resultArrayMalas.join('');
+            document.getElementById("malas").value = stringMalas.toUpperCase();
+        }
+
+        arrayLetraPresionada.push(letraPresionada);
+        console.log(arrayLetraPresionada)
+        var vidas = 9;
+        if (resultArrayMalas != undefined) {
+            vidas = vidas - resultArrayMalas.length
+        }
+        switch (vidas) {
+            case 8:
+                PrimerTrazo();
+                break;
+            case 7:
+                segundoTrazo()
+                break;
+            case 6:
+                tercerTrazo()
+                break;
+            case 5:
+                circunferencia()
+                break;
+            case 4:
+                trazoCuerpo()
+                break;
+            case 3:
+                trazoBrazoIzquierdo()
+                break;
+            case 2:
+                trazoBrazoDerecho()
+                break;
+            case 1:
+                trazoPiernaIzquierda()
+                break;
+            case 0:
+                trazoPiernaDerecha()
+                Swal.fire({
+                    title: 'Perdiste!',
+                    text: 'Intentalo de nuevo.',
+                    imageUrl: '../img/perder.png',
+                    imageWidth: 300,
+                    imageHeight: 300,
+                    imageAlt: 'Perdiste',
+                })
+        }
     })
 }
 
+
+
 const botonJugar = document.getElementById("boton-comenzar");
-console.log(botonJugar)
+// console.log(botonJugar)
 botonJugar.addEventListener("click", inciarJuego)
+
+const botonGuardaJugar = document.getElementById("btn-guardar-empezar");
+// console.log(botonGuardaJugar)
+// botonGuardaJugar.addEventListener("click", iniciarPalabraGuardada)
