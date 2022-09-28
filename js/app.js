@@ -1,12 +1,28 @@
-const palabras = ["caballo", "perro", "gato", "mesa", "silla", "computador", "luna", "oscuridad", "automovil", "avion", "sofa", "telefono", "pantalla", "lapiz", "escritorio"];
-const expresionReg = /^[a-z]+$/i;
+import { palabraGuardada } from "./palabraGuadada.js";
 
-let palabraGuardada = document.getElementById("palabraUsuario");
-console.log(palabraGuardada);
+
+const palabras = ["caballo", "perro", "gato", "mesa", "silla", "computador", "luna", "oscuridad", "automovil", "avion", "sofa", "telefono", "pantalla", "lapiz", "escritorio"];
+let palabraIngresada = document.getElementById("input-palabra");
+
+const botonJugar = document.getElementById("boton-comenzar");
+botonJugar.addEventListener("click", inciarJuego)
+
+const botonGuardaJugar = document.getElementById("btn-guardar-empezar");
+botonGuardaJugar.addEventListener("click", inciarJuego2)
 
 const inciarJuego = () => {
 
+    document.getElementById("malas").value = "";
     var palabraAzar = palabraAleatoria(palabras);
+    var guiones = funRemplazarLetras(palabraAzar);
+    var arrM = seleccionarLetras(palabraAzar, guiones);
+
+}
+
+const inciarJuego2 = () => {
+
+    document.getElementById("malas").value = "";
+    var palabraAzar = palabraAleatoria(palabraGuardada);
     var guiones = funRemplazarLetras(palabraAzar);
     var arrM = seleccionarLetras(palabraAzar, guiones);
 
@@ -111,8 +127,3 @@ function seleccionarLetras(palabra, arrGuiones) {
 
 
 
-const botonJugar = document.getElementById("boton-comenzar");
-botonJugar.addEventListener("click", inciarJuego)
-
-const botonGuardaJugar = document.getElementById("btn-guardar-empezar");
-// botonGuardaJugar.addEventListener("click", iniciarPalabraGuardada)
