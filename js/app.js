@@ -1,5 +1,12 @@
+// import { palabraGuardada } from "./palabraGuadada.js";
+
+
 const palabras = ["caballo", "perro", "gato", "mesa", "silla", "computador", "luna", "oscuridad", "automovil", "avion", "sofa", "telefono", "pantalla", "lapiz", "escritorio"];
 let palabraIngresada = document.getElementById("input-palabra");
+
+
+
+
 
 const inciarJuego = () => {
 
@@ -12,6 +19,18 @@ const inciarJuego = () => {
 
 const botonJugar = document.getElementById("boton-comenzar");
 botonJugar.addEventListener("click", inciarJuego)
+
+// const inciarJuego2 = () => {
+
+//     document.getElementById("malas").value = "";
+//     var palabraAzar = palabraAleatoria(palabraGuardada);
+//     var guiones = funRemplazarLetras(palabraAzar);
+//     var arrM = seleccionarLetras(palabraAzar, guiones);
+
+// }
+
+// const botonGuardaJugar = document.getElementById("btn-guardar-empezar");
+// botonGuardaJugar.addEventListener("click", inciarJuego2)
 
 const palabraAleatoria = (lista) => {
     let index = Math.floor(Math.random() * lista.length);
@@ -28,16 +47,18 @@ const funRemplazarLetras = (palabra) => {
 }
 
 function seleccionarLetras(palabra, arrGuiones) {
-    let p = palabra
+    let p = palabra.toUpperCase()
     const arrayLetras = Array.from(arrGuiones);
+    // console.log(p)
     const arrayMalas = [];
     const arrayBuenas = [];
     const arrayLetraPresionada = []
     var vidas = 9;
     document.addEventListener("keypress", (e) => {
-        var letraPresionada = e.key;
+        var letraPresionada = e.key.toUpperCase();
         for (let i = 0; i < p.length; i++) {
             if (letraPresionada == p[i]) {
+                // console.log(p[i]);
                 arrayLetras[i] = letraPresionada
             }
             if (letraPresionada != arrayLetraPresionada[i]) {
@@ -57,7 +78,7 @@ function seleccionarLetras(palabra, arrGuiones) {
             }
         }
         let cadena = arrayLetras.join('');
-        document.querySelector("#salida").value = cadena.toUpperCase();
+        document.querySelector("#salida").value = cadena;
         if (resultArrayMalas != undefined) {
             let stringMalas = resultArrayMalas.join('');
             document.getElementById("malas").value = stringMalas.toUpperCase();
