@@ -1,14 +1,5 @@
-import { palabraGuardada } from "./palabraGuadada.js";
-
-
 const palabras = ["caballo", "perro", "gato", "mesa", "silla", "computador", "luna", "oscuridad", "automovil", "avion", "sofa", "telefono", "pantalla", "lapiz", "escritorio"];
 let palabraIngresada = document.getElementById("input-palabra");
-
-const botonJugar = document.getElementById("boton-comenzar");
-botonJugar.addEventListener("click", inciarJuego)
-
-const botonGuardaJugar = document.getElementById("btn-guardar-empezar");
-botonGuardaJugar.addEventListener("click", inciarJuego2)
 
 const inciarJuego = () => {
 
@@ -19,14 +10,8 @@ const inciarJuego = () => {
 
 }
 
-const inciarJuego2 = () => {
-
-    document.getElementById("malas").value = "";
-    var palabraAzar = palabraAleatoria(palabraGuardada);
-    var guiones = funRemplazarLetras(palabraAzar);
-    var arrM = seleccionarLetras(palabraAzar, guiones);
-
-}
+const botonJugar = document.getElementById("boton-comenzar");
+botonJugar.addEventListener("click", inciarJuego)
 
 const palabraAleatoria = (lista) => {
     let index = Math.floor(Math.random() * lista.length);
@@ -45,7 +30,6 @@ const funRemplazarLetras = (palabra) => {
 function seleccionarLetras(palabra, arrGuiones) {
     let p = palabra
     const arrayLetras = Array.from(arrGuiones);
-    // console.log(p)
     const arrayMalas = [];
     const arrayBuenas = [];
     const arrayLetraPresionada = []
@@ -54,7 +38,6 @@ function seleccionarLetras(palabra, arrGuiones) {
         var letraPresionada = e.key;
         for (let i = 0; i < p.length; i++) {
             if (letraPresionada == p[i]) {
-                // console.log(p[i]);
                 arrayLetras[i] = letraPresionada
             }
             if (letraPresionada != arrayLetraPresionada[i]) {

@@ -1,2 +1,2 @@
-export const palabraGuardada = document.getElementById("palabraUsuario");
+// export const palabraGuardada = document.getElementById("palabraUsuario");
 
